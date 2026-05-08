@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shun Terada Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Shun Terada's Portfolio</h1>
+            <p>Master's Student / AI & Machine Learning Engineer aspirant</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#profile"><i class="fa-solid fa-user"></i> PROFILE</a></li>
+                <li><a href="#skill"><i class="fa-solid fa-lightbulb"></i> SKILL</a></li>
+                <li><a href="#works"><i class="fa-solid fa-briefcase"></i> WORKS</a></li>
+                <li><a href="#contact"><i class="fa-solid fa-envelope"></i> CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="profile" class="section">
+            <h2><i class="fa-solid fa-user"></i> PROFILE</h2>
+            <div class="profile-container">
+                <div class="profile-text">
+                    <p>大阪公立大学 電気電子システム工学科の寺田隼です。2028年3月に大学院を卒業予定です。</p>
+                    <p>大学で研究を始めるまでは、機械学習やエンジニアリングとは無縁でしたが、研究を通して機械学習やAIに興味を持つようになり、AIエンジニアを志すようになりました。</p>
+                    <p>研究では連合学習を用いた分散機械学習の基盤技術を探求し、個人開発ではLLMを活用した論文処理パイプライン（Translate
+                        app）など、実用的なアプリケーションの構築を行っています。</p>
+                    <p>将来は、アカデミアの知見と堅牢なエンジニアリングを柔軟に組み合わせ、社会の課題を解決できるAIエンジニアを目指しています。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skill" class="section">
+            <h2><i class="fa-solid fa-lightbulb"></i> SKILL</h2>
+            <section class="skill-levels">
+                <h3>スキルレベルの定義</h3>
+                <p class="skill-level-lv1">
+                    Lv.1 (Conceptual): 大学の講義や書籍を通じて基礎構文は理解しているが、自力での制作経験はない。
+                </p>
+                <p class="skill-level-lv2">
+                    Lv.2 (Guided): チュートリアルを完遂でき、参考コードや生成AIの指示通りに動作を再現できる。
+                </p>
+                <p class="skill-level-lv3">
+                    Lv.3 (Autonomous): 複数の技術要素を自ら組み合わせ、個人の制作物（既存のプロジェクトなど）として独自の機能を形にできる。
+                </p>
+                <p class="skill-level-lv4">
+                    Lv.4 (External Evaluation): インターンや共同開発など、自分の書いたコードが他者にレビューされたり、利用されたりする環境での経験がある。
+                </p>
+
+            </section>
+
+            <div class="skill-grid">
+                <div class="skill-category">
+                    <h3><i class="fa-brands fa-python"></i> Language / ML</h3>
+                    <p>
+                        研究でPythonを用いて機械学習の実装を行っており、PyTorchを用いたモデル構築や実験の経験があります。
+                    </p>
+                    <ul>
+                        <li>Python <span class="stars"><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-regular fa-star"></i></span></li>
+                        <li>PyTorch <span class="stars"><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i
+                                    class="fa-regular fa-star"></i></span></li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fa-solid fa-desktop"></i> Frontend</h3>
+                    <p>
+                        HTML/CSSは研究室のホームページとポートフォリオ作成で使用しました。
+                    </p>
+                    <ul>
+                        <li>Streamlit <span class="stars"><i class="fa-solid fa-star"></i><i
+                                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
+                                    class="fa-regular fa-star"></i></span></li>
+                        <li>HTML <span class="stars"><i class="fa-solid fa-star"></i><i
+                                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
+                                    class="fa-regular fa-star"></i></span></li>
+                        <li>CSS <span class="stars"><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i
+                                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i></span></li>
+                        <li>JavaScript <span class="stars"><i class="fa-solid fa-star"></i><i
+                                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
+                                    class="fa-regular fa-star"></i></span></li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fa-solid fa-desktop"></i> Backend / Infra</h3>
+                    <p>
+                        Translate appとSmart Walletの開発で、FastAPIを用いたバックエンドの実装を行っています。
+                    </p>
+                    <ul>
+                        <li>FastAPI <span class="stars"><i class="fa-solid fa-star"></i><i
+                                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
+                                    class="fa-regular fa-star"></i></span></li>
+                        <li>MySQL <span class="stars"><i class="fa-solid fa-star"></i><i
+                                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
+                                    class="fa-regular fa-star"></i></span></li>
+                        <li>Docker <span class="stars"><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i
+                                    class="fa-regular fa-star"></i></span></li>
+                        <li>AWS <span class="stars"><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i
+                                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i></span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="works" class="section">
+            <h2><i class="fa-solid fa-briefcase"></i> WORKS</h2>
+            <div class="works-grid">
+                <article class="work-card">
+                    <h3>Smart Wallet</h3>
+                    <p>FastAPI / Streamlit / MySQLを用いた家計簿アプリ。DB設計から実装までを一貫して担当。</p>
+                    <a href="https://github.com/teradashun/smart-wallet" target="_blank">
+                        <i class="fa-brands fa-github"></i> GitHub
+                    </a>
+                </article>
+                <article class="work-card">
+                    <h3>translate app</h3>
+                    <p>Arxivの日本語翻訳およびLaTeXコード生成支援ツール。</p>
+                    <a href="https://github.com/teradashun/Auto-translation" target="_blank">
+                        <i class="fa-brands fa-github"></i> GitHub
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2><i class="fa-solid fa-envelope"></i> CONTACT</h2>
+            <div class="contact-links">
+                <a href="https://github.com/teradashun" target="_blank">
+                    <i class="fa-brands fa-github"></i> GitHub
+                </a>
+                <a href="https://www.kaggle.com/shunt0807" target="_blank">
+                    <i class="fa-brands fa-kaggle"></i> Kaggle
+                </a>
+                <a href="mailto:so22922g@st.omu.ac.jp" target="_blank">
+                    <i class="fa-solid fa-envelope"></i> Mail
+                </a>
+                <a href="https://x.com/kahfunturaiyo" target="_blank">
+                    <i class="fa-brands fa-twitter"></i> X
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Shun Terada</p>
+    </footer>
+</body>
+
+</html>
