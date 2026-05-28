@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shun Terada Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Shun Terada's Portfolio</h1>
+            <p>Master's Student / AI & Machine Learning Engineer aspirant</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#profile"><i class="fa-solid fa-user"></i> PROFILE</a></li>
+                <li><a href="#skill"><i class="fa-solid fa-lightbulb"></i> SKILL</a></li>
+                <li><a href="#works"><i class="fa-solid fa-briefcase"></i> WORKS</a></li>
+                <li><a href="#research"><i class="fa-solid fa-flask"></i> RESEARCH</a></li>
+                <li><a href="#contact"><i class="fa-solid fa-envelope"></i> CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="profile" class="section">
+            <h2><i class="fa-solid fa-user"></i> PROFILE</h2>
+            <div class="profile-container">
+                <div class="profile-text">
+                    <p>大阪公立大学 電気電子システム工学科の寺田隼です。2028年3月に大学院を卒業予定です。</p>
+                    <p>大学では、主に機械学習、深層学習について学んでいます。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skill" class="section">
+            <h2><i class="fa-solid fa-lightbulb"></i> SKILL</h2>
+            <div class="skill-grid">
+                <div class="skill-category">
+                    <h3>Language</h3>
+                    <ul>
+                        <li>Python <span class="stars">★★☆☆</span></li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Machine Learning</h3>
+                    <ul>
+                        <li>PyTorch <span class="stars">★★☆☆</span></li>
+                        <li>Pandas <span class="stars">★☆☆☆</span></li>
+                        <li>Matplotlib <span class="stars">★☆☆☆</span></li>
+                        <li>Seaborn <span class="stars">★☆☆☆</span></li>
+                        <li>NumPy <span class="stars">★☆☆☆</span></li>
+                        <li>Scikit-learn <span class="stars">★☆☆☆</span></li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend / Infrastructure</h3>
+                    <ul>
+                        <li>FastAPI <span class="stars">★☆☆☆</span></li>
+                        <li>MySQL <span class="stars">★☆☆☆</span></li>
+                        <li>AWS <span class="stars">★☆☆☆</span></li>
+                        <li>Docker <span class="stars">★☆☆☆</span></li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <ul>
+                        <li>Streamlit <span class="stars">★☆☆☆</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="works" class="section">
+            <h2><i class="fa-solid fa-briefcase"></i> WORKS</h2>
+            <div class="works-grid">
+                <article class="work-card" onclick="openModal('modal-wallet')">
+                    <h3>Smart Wallet</h3>
+                    <p>FastAPI / Streamlit / MySQLを用いた家計簿アプリ。DB設計から実装までを一貫して担当。</p>
+                    <a href="https://github.com/teradashun/smart-wallet" target="_blank">
+                        <i class="fa-brands fa-github"></i> GitHub
+                    </a>
+                </article>
+                <article class="work-card" onclick="openModal('modal-translate')">
+                    <h3>translate app</h3>
+                    <p>Arxivの日本語翻訳およびLaTeXコード生成支援ツール。</p>
+                    <a href="https://github.com/teradashun/Auto-translation" target="_blank">
+                        <i class="fa-brands fa-github"></i> GitHub
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <section id="research" class="section research-section-bg">
+            <h2><i class="fa-solid fa-flask"></i> RESEARCH</h2>
+
+            <h3 class="research-sub-title">Current Research</h3>
+            <div class="research-grid">
+                <article class="research-card current-main-card" onclick="openModal('modal-current-research')">
+                    <div class="card-image-wrapper">
+                        <img src="/image_folder/Early-Exit.png" alt="Early-Exit Federated Learning"
+                            class="card-top-img">
+                        <span class="card-badge badge-blue">進行中の研究</span>
+                    </div>
+                    <div class="card-body-content">
+                        <h3>Early-Exit Federated Learning</h3>
+                        <p class="card-brief-text">エッジAIの計算資源と通信環境の不均一性を解決する、早期終了組み込み型の次世代連合学習フレームワーク。</p>
+                        <div class="card-tech-tags">
+                            <span>Python</span><span>PyTorch</span><span>Federated Learning</span><span>Early-Exit
+                                CNN</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <h3 class="research-sub-title" style="margin-top: 50px;">Past Research</h3>
+            <div class="research-grid">
+                <article class="research-card no-image-card past-academic-card"
+                    onclick="openModal('modal-past-conference')">
+                    <div class="card-icon-area">
+                        <i class="fa-solid fa-building-columns"></i>
+                    </div>
+                    <div class="card-info-area">
+                        <h3>学会発表・参加実績</h3>
+                        <p class="card-brief-text">電子情報通信学会 総合大会での口頭発表実績など。</p>
+                        <span class="tap-notice"><i class="fa-solid fa-arrow-pointer"></i> タップして実績を表示</span>
+                    </div>
+                </article>
+
+                <article class="research-card no-image-card past-academic-card"
+                    onclick="openModal('modal-past-thesis')">
+                    <div class="card-icon-area">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </div>
+                    <div class="card-info-area">
+                        <h3>卒業論文</h3>
+                        <p class="card-brief-text">グラフニューラルネットワークを用いた連合学習の性能評価モデルを構築。</p>
+                        <span class="tap-notice"><i class="fa-solid fa-arrow-pointer"></i> タップして詳細を表示</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2><i class="fa-solid fa-envelope"></i> CONTACT</h2>
+            <div class="contact-links">
+                <a href="https://github.com/teradashun" target="_blank">
+                    <i class="fa-brands fa-github"></i> GitHub
+                </a>
+                <a href="https://www.kaggle.com/shunt0807" target="_blank">
+                    <i class="fa-brands fa-kaggle"></i> Kaggle
+                </a>
+                <a href="mailto:so22922g@st.omu.ac.jp" target="_blank">
+                    <i class="fa-solid fa-envelope"></i> Mail
+                </a>
+                <a href="https://x.com/kahfunturaiyo" target="_blank">
+                    <i class="fa-brands fa-twitter"></i> X
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Shun Terada</p>
+    </footer>
+
+    <div id="modal-wallet" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-wallet')">&times;</span>
+            <h2>Smart Wallet</h2>
+            <img src="/image_folder/Smart-Wallet_demo.png" alt="Demo" style="width:100%; margin-bottom:15px;">
+            <p>FastAPI / Streamlit / MySQLを用いた家計簿アプリ。DB設計から実装までを一貫して担当。</p>
+            <a href="https://github.com/teradashun/smart-wallet" target="_blank"><i class="fa-brands fa-github"></i>
+                GitHub</a>
+        </div>
+    </div>
+
+    <div id="modal-translate" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-translate')">&times;</span>
+            <h2>translate app</h2>
+            <img src="/image_folder/translate_demo.png" alt="Demo" style="width:100%; margin-bottom:15px;">
+            <p>Arxivの日本語翻訳およびLaTeXコード生成支援ツール。</p>
+            <a href="https://github.com/teradashun/Auto-translation" target="_blank"><i class="fa-brands fa-github"></i>
+                GitHub</a>
+        </div>
+    </div>
+
+    <div id="modal-current-research" class="modal">
+        <div class="modal-content modal-large">
+            <span class="close-btn" onclick="closeModal('modal-current-research')">&times;</span>
+            <h2>Early-Exit Federated Learning</h2>
+            <div class="modal-body">
+                <img src="/image_folder/Early-Exit-FL.png" alt="Early-Exit Federated Learning"
+                    class="modal-display-img">
+                <div class="research-details">
+                    <span class="research-tag tag-current">現在進行中</span>
+                    <h3>研究背景・課題</h3>
+                    <p>エッジデバイスを用いた連合学習（Federated Learning）において、各デバイスの計算資源や通信環境の不均一性が全体の学習効率を低下させるボトルネックとなっています。</p>
+                    <h3>提案手法・アプローチ</h3>
+                    <p>ニューラルネットワークに早期終了（Early-Exit）の仕組みを導入。計算資源に余裕のないデバイスや、確信度の高いデータに対しては途中のレイヤーで推論を打ち切ることで、精度を維持しつつ通信量と計算コストを大幅に削減します。
+                    </p>
+                    <h3>技術スタック・キーワード</h3>
+                    <p class="tech-labels"><span>Python</span><span>PyTorch</span><span>Federated
+                            Learning</span><span>Early-Exit CNN</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-past-conference" class="modal">
+        <div class="modal-content modal-large">
+            <span class="close-btn" onclick="closeModal('modal-past-conference')">&times;</span>
+            <h2>学会発表・参加実績</h2>
+            <div class="modal-body">
+                <div class="research-details">
+                    <span class="research-tag tag-past">参加実績</span>
+                    <p>これまでに参加・発表した学会の一覧です。</p>
+                    <ul style="padding-left: 20px; margin-top: 15px; line-height: 1.8;">
+                        <li>
+                            <strong>電子情報通信学会 総合大会（2026年）</strong><br>
+                            口頭発表（テーマ：連合学習を用いたグラフニューラルネットワークの性能評価）<br>
+
+                            <a href="document_folder/conference_abstract.pdf" target="_blank"
+                                style="display: inline-block; margin-top: 5px; margin-right: 20px; color: #0d47a1; text-decoration: none;">
+                                <i class="fa-solid fa-file-pdf"></i> 大会要旨（PDF）を見る
+                            </a>
+
+                            <a href="document_folder/conference_slides.pdf" target="_blank"
+                                style="display: inline-block; margin-top: 5px; color: #0d47a1; text-decoration: none;">
+                                <i class="fa-solid fa-display"></i> 発表スライド（PDF）を見る
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-past-thesis" class="modal">
+        <div class="modal-content modal-large">
+            <span class="close-btn" onclick="closeModal('modal-past-thesis')">&times;</span>
+            <h2>卒業論文</h2>
+            <div class="modal-body">
+                <div class="research-details">
+                    <span class="research-tag tag-past">学部研究</span>
+                    <table class="research-meta-table">
+                        <tr>
+                            <th>論文題目</th>
+                            <td>連合学習を用いたグラフニューラルネットワークの性能評価</td>
+                        </tr>
+                        <tr>
+                            <th>提出資料</th>
+                            <td>
+                                <a href="document_folder/thesis_abstract.pdf" target="_blank"
+                                    style="color: #0d47a1; text-decoration: none; font-weight: bold;">
+                                    <i class="fa-solid fa-file-pdf"></i> 卒論要旨（PDF）を見る
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <h3>研究の背景：データを1カ所に集められない問題</h3>
+                    <p>AIを賢く育てるためには大量のデータが必要ですが、プライバシーの保護や企業のセキュリティ・機密保持の観点から、個人情報や重要なデータを1つのサーバーにすべて集約して訓練を行うことが難しいという課題があります。
+                    </p>
+
+                    <h3>アプローチ：データを移動させずに安全に賢くなる「連合学習」</h3>
+                    <p>そこで、データを集約するのではなく、AIの「学習ルール（モデル）」を各端末へ配布し、それぞれの場所で手元にあるデータだけを使って個別に学習を行います。データそのものは外に出さず、学習によって得られた「成果（パラメータ）」のみを回収・合体（集約）させることで、安全に賢いAIを構築する「連合学習（Federated
+                        Learning）」という仕組みに注目しました。</p>
+
+                    <h3>取り組んだことと成果</h3>
+                    <p>本研究では、このプライバシー保護型の学習手法を、論文の引用関係やSNSの繋がり、ネットワーク構造を表現するのに最適な「グラフニューラルネットワーク（GNN）」に組み合わせました。実験では、データを小分けにして学習に参加する端末の数（クライアント数）を5台、10台、20台と変化させた際に、AIの賢さ（識別精度）や全体の学習スピード（ラウンド数）にどのような影響や変化を及ぼすかをシミュレーションし、性能評価を行いました。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal(id) { document.getElementById(id).style.display = "block"; }
+        function closeModal(id) { document.getElementById(id).style.display = "none"; }
+        window.onclick = function (event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,379 @@
+/* 基本設定 */
+body {
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-image: url('image_folder/portfolio.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 120px 20px;
+    text-align: center;
+    position: relative;
+}
+
+nav {
+    background: transparent;
+    border: none;
+    text-align: center;
+    width: 100%;
+}
+
+nav ul {
+    display: inline-flex;
+    background-color: #fff;
+    padding: 0 40px;
+    margin: 0;
+    list-style: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    display: block;
+    padding: 15px 0;
+}
+
+nav a i {
+    margin-right: 8px;
+}
+
+/* セクション共通 */
+.section {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    font-size: 40px;
+    text-align: center;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.profile-text {
+    font-size: 18px;
+}
+
+/* グリッド配置共通 */
+.skill-grid,
+.works-grid,
+.research-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.skill-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-category li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.skill-category,
+.work-card,
+.research-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ホバー効果 */
+.work-card {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.work-card:hover {
+    transform: scale(1.05);
+}
+
+/* ==================== RESEARCHセクション特別装飾 ==================== */
+.research-section-bg {
+    background: #ffffff;
+    border-radius: 12px;
+    /* 12px: 他のセクションと差別化し、1つの統合コンテンツとして角を綺麗に丸めるため */
+    padding: 40px 30px !important;
+    /* 30px: 内側の余白をゆったり持たせ、研究の厳かさを演出するため */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    /* 0.04: 非常に薄い影でセクション全体を上品に引き立たせるため */
+}
+
+.research-sub-title {
+    font-size: 22px;
+    color: #0f2b46;
+    /* #0f2b46: 信頼感のあるディープネイビーで、知的なアカデミックさを表現するため */
+    border-bottom: 2px solid #e2e8f0;
+    /* 2px: サブ見出しの境界をすっきりとした細線で区切るため */
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+}
+
+/* 改良版リッチCurrent Researchカード */
+.current-main-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    /* hidden: 画像の角丸からはみ出る部分を綺麗にカットするため */
+    border: 1px solid #e2e8f0;
+    padding: 0 !important;
+    /* 0: 画像をカードの左右端まで隙間なく広げるレイアウトにするため */
+}
+
+.card-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    /* 180px: カード上部で画像が主張しすぎず、かつ視覚的フックとして最適な高さを確保するため */
+    background: #f1f5f9;
+}
+
+.card-top-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-badge {
+    position: absolute;
+    top: 12px;
+    /* 12px: 左上の端からほどよい余白をとってバッジを浮かせるため */
+    left: 12px;
+    padding: 4px 10px;
+    font-size: 11px;
+    font-weight: bold;
+    border-radius: 20px;
+    /* 20px: 完全なカプセル型の丸みを持たせてモダンなタグにするため */
+    color: #fff;
+}
+
+.badge-blue {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    /* AI・先進性を表す鮮やかなブルーのグラデーション */
+}
+
+.card-body-content {
+    padding: 20px;
+}
+
+.card-body-content h3 {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+    color: #1e293b;
+}
+
+.card-brief-text {
+    font-size: 14px;
+    /* 14px: 本文より一回り小さくし、カード上でのサマリーとして読みやすくするため */
+    color: #64748b;
+    /* #64748b: 落ち着いたグレーで視覚的ノイズを減らすため */
+    margin: 8px 0 16px 0;
+    line-height: 1.5;
+}
+
+.card-tech-tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.card-tech-tags span {
+    background: #f1f5f9;
+    color: #475569;
+    padding: 2px 8px;
+    font-size: 12px;
+    border-radius: 4px;
+    /* 4px: 控えめな角丸で技術スタックのラベルをすっきり見せるため */
+}
+
+/* 写真なしカード（学会・卒論）の劇的改良 */
+.past-academic-card {
+    display: flex !important;
+    flex-direction: row !important;
+    /* 横並びレイアウトにして、左にアイコン、右にテキストを配置するため */
+    align-items: center;
+    padding: 24px !important;
+    border: 1px solid #e2e8f0;
+    border-left: 5px solid #0f2b46 !important;
+    /* 5px: 左側に重厚なネイビーのラインを通し、学術的な厳かさを表現するため */
+    background: #ffffff;
+}
+
+.card-icon-area {
+    font-size: 28px;
+    /* 28px: アイコンを適度に大きくし、写真の代わりとして視覚的シンボルにするため */
+    color: #0f2b46;
+    margin-right: 20px;
+    /* 20px: 右側の文章エリアとの間に十分な間隔を空けるため */
+    background: #f0f4f8;
+    width: 55px;
+    /* 55px: アイコンの背景を綺麗な正方形の円にするため */
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    /* 50%: 綺麗な正円のアイコン台座を作るため */
+    flex-shrink: 0;
+    /* 0: 画面が狭くなっても正円が潰れないように固定するため */
+}
+
+.card-info-area {
+    flex: 1;
+}
+
+.card-info-area h3 {
+    margin: 0 0 6px 0 !important;
+    font-size: 18px !important;
+    color: #1e293b;
+}
+
+/* 研究カード専用ホバー効果の上書き */
+.research-card {
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    /* 0.25s: 浮き上がりのアニメーションに滑らかな時間変化を与えるため */
+}
+
+.research-card:hover {
+    transform: translateY(-6px) !important;
+    /* -6px: ホバー時に要素がスッと上に浮き上がる洗練されたインタラクションを与えるため */
+    box-shadow: 0 12px 24px rgba(15, 43, 70, 0.12) !important;
+    /* 0.12: 浮き上がりに合わせて少し深く柔らかいネイビー寄りの影を落とすため */
+    border-color: #cbd5e1;
+}
+
+/* ==================== モーダル設定 ==================== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 600px;
+    position: relative;
+}
+
+.modal-large {
+    max-width: 800px;
+    width: 90%;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 35px;
+    cursor: pointer;
+    color: #aaa;
+}
+
+.close-btn:hover {
+    color: #333;
+}
+
+.modal-body {
+    margin-top: 20px;
+    line-height: 1.8;
+}
+
+.modal-display-img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.research-details h3 {
+    font-size: 18px;
+    border-left: 4px solid #333;
+    padding-left: 10px;
+    margin: 25px 0 10px 0;
+}
+
+.research-details p {
+    font-size: 15px;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.research-tag {
+    display: inline-block;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.tag-current {
+    background-color: #e3f2fd;
+    color: #0d47a1;
+}
+
+.tag-past {
+    background-color: #f5f5f5;
+    color: #616161;
+}
+
+.tech-labels span {
+    display: inline-block;
+    background: #f0f0f0;
+    padding: 2px 8px;
+    margin-right: 6px;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+.research-meta-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.research-meta-table th,
+.research-meta-table td {
+    border-bottom: 1px solid #eee;
+    padding: 10px;
+    text-align: left;
+    font-size: 15px;
+}
+
+.research-meta-table th {
+    width: 25%;
+    color: #666;
+    background-color: #fafafa;
+}
